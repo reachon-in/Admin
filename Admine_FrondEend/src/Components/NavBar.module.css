@@ -1,0 +1,199 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 64px;
+  gap: 303px;
+  position: absolute;
+  height: 19.59px;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  background: rgba(255, 255, 255, 0.02);
+  border-bottom: 0.89px solid rgba(245, 245, 245, 0.78);
+  backdrop-filter: blur(56px);
+  z-index: 100;
+}
+
+.logo {
+  margin: 0 auto;
+  width: 143px;
+  height: 52.59px;
+  display: flex;
+  align-items: center;
+}
+
+.logoImg {
+  width: 143px;
+  height: 52.59px;
+  object-fit: contain;
+  display: block;
+}
+
+.searchContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin: 0 auto;
+  width: 470px;
+  height: 48px;
+  border-radius: 12px;
+  background: none;
+}
+
+.searchInputWrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 48px;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+.searchInput {
+  flex: 1;
+  width: 406px;
+  height: 24px;
+  font-family: 'Inter', Arial, sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #fff;
+  background: rgba(240, 242, 245, 0.05);
+  border: none;
+  border-radius: 0 12px 12px 0;
+  padding: 8px 16px 8px 40px;
+  outline: none;
+}
+
+.rightSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 32px;
+  width: 184px;
+  height: 40px;
+}
+
+.bellBtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 10px;
+  gap: 8px;
+  width: 40px;
+  height: 40px;
+  background: rgba(240, 242, 245, 0.04);
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.bellBtn:hover {
+  background: rgba(240, 242, 245, 0.10);
+}
+
+.bellBtn svg {
+  width: 20px;
+  height: 20px;
+  color: #61788A;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  object-fit: cover;
+  background: #F5F5F5;
+  border: none;
+}
+
+.notificationContainer {
+  position: relative;
+}
+
+.notificationPopup {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 320px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  margin-top: 8px;
+  z-index: 1000;
+}
+
+.notificationHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.notificationHeader h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #666;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.closeBtn:hover {
+  color: #333;
+}
+
+.notificationList {
+  max-height: 400px;
+  overflow-y: auto;
+  
+}
+
+.notificationItem {
+  padding: 12px 16px;
+  border-bottom: 1px solid #ffffff;
+  cursor: pointer;
+  transition: border 0.2s;
+  border: 2px solid transparent;
+}
+
+.notificationItem:hover,
+.notificationItem:focus {
+  border: 2px solid rgba(255, 255, 255, 0.353);
+  outline: none;
+}
+
+.notificationItem p {
+  margin: 0 0 4px 0;
+  color: #c4c4c4;
+  font-size: 14px;
+}
+
+.notificationTime {
+  color: #666;
+  font-size: 12px;
+}

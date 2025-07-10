@@ -1,0 +1,281 @@
+.container {
+  background: #000;
+  min-height: 100vh;
+  padding: 100px 0 0 0;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+  padding: 0 32px;
+}
+
+.title {
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 0.2em;
+  margin-left: 250px;
+}
+
+.subtitle {
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-bottom: 55px;
+  margin-left: 250px;
+}
+
+.newPostBtn {
+  background: #0066ff;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 16px;
+  padding: 20px 40px;
+  cursor: pointer;
+  margin-left: 24px;
+  margin-top: 0;
+  transition: background 0.2s;
+}
+
+.newPostBtn:hover {
+  background: #0052cc;
+}
+
+.filterRow {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+  padding: 0 32px;
+}
+
+.statusFilter {
+  background: #000;
+  color: #fff;
+  border: 2px solid #ffffff8f;
+  width: 11vw;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  padding: 10px 24px;
+  outline: none;
+  margin-left: 250px;
+  cursor: pointer;
+}
+
+.postsList {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 0 0 32px 0;
+}
+
+.postCard {
+  background: #000000;
+  border-radius: 24px;
+  padding: 32px 36px 28px 36px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  width: 70vw;
+  align-self: flex-end;
+  min-height: 160px;
+  margin-right: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  opacity: 0.9;
+  border: 2px solid #86868691;
+}
+
+.postHeader {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 8px;
+}
+
+.postTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #dbe3ea;
+  flex: 1;
+}
+
+.greenBadge {
+  background: #6fffc2;
+  color: #1a7f4c;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 6px 18px;
+  margin-left: 8px;
+}
+
+.redBadge {
+  background: #ffb3b3;
+  color: #b30000;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 6px 18px;
+  margin-left: 8px;
+}
+
+.postDescription {
+  color: #dbe3ea;
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+}
+
+.postMeta {
+  color: #dbe3ea;
+  font-size: 1rem;
+  opacity: 0.7;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.postMetaTop {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.contentType {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.tags {
+  color: #dbe3ea;
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+.newPostContainer {
+  position: relative;
+}
+
+.newPostMenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 8px;
+  background: #000;
+  border: 2px solid #ffffff8f;
+  border-radius: 12px;
+  padding: 8px 0;
+  min-width: 160px;
+  z-index: 1000;
+}
+
+.menuOption {
+  display: block;
+  width: 100%;
+  padding: 12px 24px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.menuOption:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.postActions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.menuContainer {
+  position: relative;
+}
+
+.menuButton {
+  background: transparent;
+  border: none;
+  color: #fff;
+  padding: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.menuButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 0.5rem;
+  min-width: 160px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  animation: slideIn 0.2s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.menuItem:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.menuItem svg {
+  width: 20px;
+  height: 20px;
+  color: #fff;
+}
+
+
+.loader {
+  font-size: 18px;
+  color: #ffffff;
+  text-align: left;
+  padding: 20px;
+  margin: auto;
+}

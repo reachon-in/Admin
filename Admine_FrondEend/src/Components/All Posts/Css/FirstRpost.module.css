@@ -1,0 +1,784 @@
+.container {
+  background: #000;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: 'Inter', Arial, sans-serif;
+  padding-top: 100px;
+}
+
+.content {
+  width: 70%;
+  max-width: 800px;
+}
+
+.topBar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto 32px auto;
+  padding-top: 40px;
+  gap: 18px;
+}
+
+.pageTitle {
+  color: #fff;
+  font-size: 3.2rem;
+  font-weight: 800;
+  margin: 0 auto 32px auto;
+  text-align: center;
+  width: 100%;
+  position: static;
+  left: unset;
+  top: unset;
+  padding-left: 0;
+}
+
+.topBarActions {
+  display: flex;
+  gap: 18px;
+}
+
+.cancelBtn {
+  background: transparent;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: 2px solid #fff;
+  border-radius: 12px;
+  padding: 12px 40px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.cancelBtn:hover {
+  background: #fff;
+  color: #000;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.input {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1rem;
+  color: #fff;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.buttonWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.submitButton {
+  background: #0066ff;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 40px;
+  cursor: pointer;
+  transition: background 0.2s;
+  min-width: 200px;
+}
+
+.submitButton:hover {
+  background: #0052cc;
+}
+
+.firstRHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.fullScreenButton {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.fullScreenButton:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.fisterContainer {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 600px;
+  resize: both;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.fisterContainer.fullScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  border-radius: 0;
+  border: none;
+  resize: none;
+  background: #000;
+}
+
+.fisterContainer.fullScreen .photopeaContainer {
+  min-height: 100vh;
+}
+
+.fisterInput {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: 1rem;
+  min-height: 200px;
+  resize: vertical;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.fisterInput:focus {
+  outline: none;
+}
+
+.fisterInput::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.fisterTools {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.toolButton {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.toolButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.editorWrapper {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.fileInput {
+  color: #fff;
+  padding: 0.5rem;
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.fileInput:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.imagePreview {
+  width: 100%;
+  max-height: 400px;
+  overflow: hidden;
+  background: #000;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.uploadedImage {
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+}
+
+/* Override react-image-crop styles */
+:global(.ReactCrop) {
+  background: #000;
+}
+
+:global(.ReactCrop__crop-selection) {
+  border: 2px solid #fff;
+}
+
+:global(.ReactCrop__drag-handle) {
+  background: #fff;
+}
+
+/* Override Toast UI Image Editor styles */
+:global(.tui-image-editor-container) {
+  background: #000 !important;
+}
+
+:global(.tui-image-editor-header) {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+:global(.tui-image-editor-controls) {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+:global(.tui-image-editor-button) {
+  color: #fff !important;
+}
+
+:global(.tui-image-editor-button:hover) {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.tagsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tagsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  min-height: 40px;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  position: relative;
+}
+
+.tagChip {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.removeTag {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.removeTag:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.tagInput {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.5rem;
+  width: 100%;
+  min-width: 200px;
+  flex-grow: 1;
+}
+
+.tagInput:focus {
+  outline: none;
+}
+
+.tagInput::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.fisterHeader {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.editorControls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.editorButton {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.editorButton:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.photopeaContainer {
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  background: #000;
+  position: relative;
+  flex-grow: 1;
+}
+
+.photopeaFrame {
+  width: 100%;
+  height: 100%;
+  border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* Remove unused styles */
+.fisterHeader,
+.editorControls,
+.editorButton,
+.editorWrapper,
+.fileInput,
+.imagePreview,
+.uploadedImage,
+.fisterInput,
+.fisterTools,
+.toolButton {
+  display: none;
+}
+
+.exitFullScreenButton {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  z-index: 1001;
+}
+
+.exitFullScreenButton:hover {
+  background: rgba(0, 0, 0, 0.9);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: scale(1.1);
+}
+
+.voiceContainer {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.voiceControls {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.voiceButton {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.voiceButton:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.voiceButton.recording {
+  background: #ff4444;
+  border-color: #ff6666;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 68, 68, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 68, 68, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 68, 68, 0);
+  }
+}
+
+.recordingTime {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.audioPreview {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.audioPlayer {
+  flex-grow: 1;
+  height: 40px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.audioPlayer::-webkit-media-controls-panel {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.audioPlayer::-webkit-media-controls-current-time-display,
+.audioPlayer::-webkit-media-controls-time-remaining-display {
+  color: #fff;
+}
+
+.deleteButton {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.deleteButton:hover {
+  background: rgba(255, 68, 68, 0.2);
+  border-color: rgba(255, 68, 68, 0.4);
+}
+
+.mediaContainer {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.mediaTypeSelector {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mediaTypeButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.mediaTypeButton:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.mediaTypeButton.active {
+  background: rgba(0, 102, 255, 0.2);
+  border-color: rgba(0, 102, 255, 0.4);
+  color: #0066ff;
+}
+
+.audioModeSelector {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.audioModeButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.audioModeButton:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.audioModeButton.active {
+  background: rgba(0, 102, 255, 0.2);
+  border-color: rgba(0, 102, 255, 0.4);
+  color: #0066ff;
+}
+
+.audioUpload {
+  width: 100%;
+  height: 200px;
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.audioUpload:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.audioInput {
+  display: none;
+}
+
+.audioUploadLabel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.inputError {
+  border-color: #ff4444 !important;
+}
+
+.errorMessage {
+  color: #ff4444;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.submitButtonDisabled {
+  background: #666 !important;
+  cursor: not-allowed !important;
+  opacity: 0.7;
+}
+
+.successMessage {
+  background: #2ecc40;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  margin-top: 1rem;
+  animation: fadeIn 0.3s ease-out;
+  text-align: center;
+  justify-content: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.imageUploadContainer {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.imageUpload {
+  width: 100%;
+  height: 200px;
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.imageUpload:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.imageInput {
+  display: none;
+}
+
+.imageUploadLabel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.imagePreview {
+  position: relative;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.previewImage {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+  display: block;
+}
+
+.removeImageButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  transition: all 0.2s;
+}
+
+.removeImageButton:hover {
+  background: rgba(0, 0, 0, 0.7);
+  transform: scale(1.1);
+}
